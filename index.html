@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome Link -->
+    <title>Palette - Home</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <nav>
         <div class="imglogo">
-            <img src="h.png" alt="S" class="logoS">
-            <img src="logo.png" alt="Logo">
+            <img src="assets/h.png" alt="S" class="logoS">
+            <img src="assets/logo.png" alt="Logo">
         </div>
         <ul>
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="palette.html">Color Palette</a></li>
-                <li><a href="font.html">Font Family</a></li>
+                <li><a href="pages/palette.html">Color Palette</a></li>
+                <li><a href="pages/font.html">Font Family</a></li>
             </ul>
-            <li><a href="#" class="menu-icon"><i class="fa-solid fa-bars"></i></a></li>
+            <a href="#" class="menu-icon"><i class="fa-solid fa-bars"></i></a>
         </ul>
     </nav>
 
-    <div class="container">
-        <div class="font">
-            <div class="title">
-                <h1>Welcome To <br> Palette</h1><br><br>
-                <img src="font4.webp" class="font3">
-                <img src="font3.png" class="fon1">
+    <main class="container">
+        <section class="font-preview">
+            <div class="title-area">
+                <h1>Welcome To <br><span>Palette</span></h1>
+                <div class="decorative-images">
+                    <img src="assets/font4.webp" class="img-float-1" alt="">
+                    <img src="assets/font3.png" class="img-float-2" alt="">
+                </div>
             </div>
-            <div class="img1">
-                <img src="font.png" alt="df" class="ff">
-                <img src="font2.jpg" alt="fw" class="fon2">
-                <img src="font5.jpg" alt="fw" class="fon5">
+            <div class="gallery">
+                <img src="assets/font.png" class="gallery-img-1" alt="">
+                <img src="assets/font2.jpg" class="gallery-img-2" alt="">
+                <img src="assets/font5.jpg" class="gallery-img-mobile" alt="">
             </div>
-        </div>
-        <div class="color">
-            <img src="palet2.avif" alt="">
-        </div>
-    </div>
+        </section>
+        <section class="color-preview">
+            <img src="assets/palet2.avif" alt="Color Palette Preview">
+        </section>
+    </main>
 
-    <script src="script.js"></script> <!-- External JS file for menu toggle -->
+    <script src="js/common.js"></script>
 </body>
+
 </html>
