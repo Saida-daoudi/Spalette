@@ -1,0 +1,112 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.palette-card {
+    background: white;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palette-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.color-preview {
+    height: 140px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.color-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 0 5px;
+}
+
+.hex-value {
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+.copy-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7b68ee;
+    font-size: 16px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.copy-button:hover {
+    color: #191970;
+}
+
+.check-icon {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+}
+
+.copy-button.copied .fa-copy {
+    opacity: 0;
+}
+
+.copy-button.copied .check-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.generate-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #191970;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(25, 25, 112, 0.3);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.generate-btn:hover {
+    background: #ff6347;
+    box-shadow: 0 10px 25px rgba(255, 99, 71, 0.3);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.generate-btn i {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+        gap: 15px;
+    }
+}
