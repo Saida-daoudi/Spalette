@@ -1,0 +1,300 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f8f8ff;
+    font-size: 16px;
+}
+
+/* Navbar styles */
+.imglogo{
+    width: auto;
+    display: flex;
+}
+
+.imglogo img{
+    width: auto;
+    height: 30px;
+    margin-top: 13px;
+}
+
+.imglogo .logoS{
+    width: 40px;
+    height: auto;
+    margin-top: 0px;
+}
+
+
+nav {
+    background-image: linear-gradient(to left, #191970, #ff6347);
+    padding: 15px 0;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar links */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Active link styling */
+nav ul li a.active {
+    border-bottom: 3px solid #ff6347;
+}
+
+.menu-icon {
+    display: none; /* Hide by default */
+}
+
+/* Make sure the body content doesn't hide under the fixed navbar */
+body {
+    padding-top: 60px;  /* Adjust for the fixed navbar height */
+}
+
+.container{
+    background-color: #f0e6dd;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .color{
+    width: 40%;
+    height: auto;
+    margin-top: 60px;
+}
+
+.container .font{
+    width: 58%;
+    margin-top: 60px;
+    /* margin-left: 70px; */
+}
+
+.container .font .title h1{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 80px;
+    margin-top: -20px;
+    margin-left: 50px;
+   
+}
+
+.container .font .img1{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .font .img1 .ff{
+    width: 250px;
+    margin-top: -80px;
+    margin-left: 100px;
+    height: 330px;
+    transform: rotate(30deg);  /* Initially rotate the image by -30 degrees (tilted left) */
+    transition: transform 0.5s ease;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .font .fon1{
+    width: 150px;
+    height: 230px;
+    transform: none;
+    transition: none;
+}
+
+.container .font .title .font3{
+    width: auto;
+    height: 150px;
+    margin-top: 150px;
+    margin-right: 30px;
+    transform: none;
+    transition: none;
+}
+
+.container .font .img1 .fon2{
+    width: 200px;
+    margin-top: 50px;
+    height: 250px;
+    transform: none;
+    transition: none;
+}
+
+.container .font .img1 .fon5{
+    display: none;
+}
+
+.container .font .img1 .ff:hover  {
+    transform: translateX(0); 
+}
+.container .font .title .font3:hover  {
+    transform: rotate(20deg);  
+    transition: transform 0.5s ease;
+}
+.container .font .img1 .fon2:hover  {
+    transform: rotate(-30deg); 
+    transition: transform 0.5s ease;
+}
+.container .font .title .fon1:hover  {
+    transform: rotate(-10deg);  
+    transition: transform 0.5s ease; 
+}
+
+
+@media screen and ( max-width: 600px ){
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+
+    body{
+        background-color: #f0e6dd;
+    }
+
+    .container .font{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .font .img1 .ff{
+        margin-top: 20px;
+        margin: 30px;
+        width: 60%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container .font .title {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .container .font .title h1{  
+        width: 100%;
+        text-align: center;
+        font-weight: 900;
+        margin: 20px;
+    }
+
+    /* img{
+        
+    } */
+
+    .container .font .title .fon1{
+        margin-top: -10px;
+        margin: 30px;
+    }
+
+    .container .font .title .font3{
+        width: 150px;
+        height: 150px;
+        margin-top: 0;
+        margin: 30px;
+    }
+
+    .container .font .img1 .fon5{
+        display: block;
+        width: 200px;
+        margin-top: 50px;
+        height: 250px;
+        transform: none;
+        margin: 30px;
+        transition: none;
+    }
+
+    .container .font .img1 .fon2{
+        margin: 30px;
+    }
+
+    .container .font .img1{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .container .color{
+        width: 100%;
+    }
+
+    nav ul ul{
+        display: none; /* Hide the menu items by default */
+        flex-direction: column;
+        position: absolute;
+        font-size: 25px;
+        padding: 20px;
+        top: 80px;
+        left: 0;
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+        background-color: #191970;
+    }
+
+    nav ul li a:hover {
+        color: #ff6347;
+        transform: scale(1.1);
+    }
+    
+    /* Active link styling */
+    nav ul li a.active {
+        border-bottom: 3px solid #ff6347;
+    }
+    
+    /* Show the icon on mobile */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: white;
+        transition: color 0.3s, transform 0.2s;
+    }
+    
+    /* When menu is shown, display it */
+    nav ul.show {
+        display: flex;
+    }    
+}
